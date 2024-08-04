@@ -46,6 +46,9 @@ devDependencies:
   '@types/react-dom':
     specifier: ^17.0.0
     version: 17.0.25
+  '@types/react-router-dom':
+    specifier: ^5.1.6
+    version: 5.3.3
   babel-loader:
     specifier: ^8.0.6
     version: 8.3.0(@babel/core@7.24.9)(webpack@4.47.0)
@@ -1490,6 +1493,10 @@ packages:
       '@types/node': 20.14.11
     dev: true
 
+  /@types/history@4.7.11:
+    resolution: {integrity: sha512-qjDJRrmvBMiTx+jyLxvLfJU7UznFuokDv4f3WRuriHKERccVpFU+8XMQUAbDzoiJCsmexxRExQeMwwCdamSKDA==}
+    dev: true
+
   /@types/json-schema@7.0.15:
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
     dev: true
@@ -1511,6 +1518,21 @@ packages:
   /@types/react-dom@17.0.25:
     resolution: {integrity: sha512-urx7A7UxkZQmThYA4So0NelOVjx3V4rNFVJwp0WZlbIK5eM4rNJDiN3R/E9ix0MBh6kAEojk/9YL+Te6D9zHNA==}
     dependencies:
+      '@types/react': 17.0.80
+    dev: true
+
+  /@types/react-router-dom@5.3.3:
+    resolution: {integrity: sha512-kpqnYK4wcdm5UaWI3fLcELopqLrHgLqNsdpHauzlQktfkHL3npOSwtj1Uz9oKBAzs7lFtVkV8j83voAz2D8fhw==}
+    dependencies:
+      '@types/history': 4.7.11
+      '@types/react': 17.0.80
+      '@types/react-router': 5.1.20
+    dev: true
+
+  /@types/react-router@5.1.20:
+    resolution: {integrity: sha512-jGjmu/ZqS7FjSH6owMcD5qpq19+1RS9DeVRqfl1FeBMxTDQAGwlMWOcs52NDoXaNKyG3d1cYQFMs9rCrb88o9Q==}
+    dependencies:
+      '@types/history': 4.7.11
       '@types/react': 17.0.80
     dev: true
 

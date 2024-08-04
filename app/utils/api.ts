@@ -12,7 +12,14 @@ function getErrorMsg(message: string, username: string) {
 
 export interface User {
   id: string;
+  name: string;
   followers: number;
+  following: number;
+  login: string;
+  company?: string;
+  location?: string;
+  avatar_url: string;
+  html_url: string;
 }
 
 function getProfile(username: string): Promise<User> {
@@ -27,8 +34,13 @@ function getProfile(username: string): Promise<User> {
     });
 }
 
-interface Repo {
+export interface Repo {
+  name: string;
+  owner: User;
+  html_url: string;
   stargazers_count: number;
+  forks: number;
+  open_issues: number;
 }
 
 function getRepos(username: string): Promise<Repo[]> {
@@ -56,7 +68,7 @@ function calculateScore(followers: number, repos: Repo[]) {
   return followers * 3 + getStarCount(repos);
 }
 
-interface Player {
+export interface Player {
   profile: User;
   score: number;
 }
